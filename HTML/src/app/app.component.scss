@@ -1,0 +1,63 @@
+.app-nested-select-container {
+  min-height: 450px;
+  font-size: 20px;
+  @media (min-width: 769px) and (max-width: 1040px) {
+    width: 90%;
+  }
+  @media only screen and (min-width: 1041px) {
+    width: 60%;
+  }
+  .recursive-select-box-container {
+    width: 100%;
+    display: inline-block;
+    margin-top: 15px;
+    .select-container {
+      display: inline-block;
+      position: relative;
+      padding-bottom: 1.25em;
+      @media only screen and (min-width: 769px) {
+        width: 50%;
+      }
+      @media only screen and (max-width: 768px) {
+        width: 90%;
+      }
+      .select-box {
+        position: relative;
+        cursor: pointer;
+        border-bottom: 1px solid;
+        padding: .4375em 0;
+        span {
+          padding: 0.4375em 0;
+        }
+        .mat-icon {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
+      .open-select-box {
+        display: block !important;
+      }
+      .close-select-box {
+        display: none;
+      }
+    }
+    .food-added-btn {
+      margin-left: 20px;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+      @media (min-width:769px) and (max-width:1040px) {
+        width: 10%;
+        display: inline-block;
+      }
+    }
+    .mat-form-field-infix {
+      border-top: 0;
+    }
+  }
+  .selected-food-container {
+    text-align: left;
+    margin-left: 15%;
+  }
+}

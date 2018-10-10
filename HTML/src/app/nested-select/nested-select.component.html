@@ -1,0 +1,16 @@
+<div class="nested-select-container">
+  <div class="food-table">
+    <div class="table-row" *ngFor="let food of foodList;let i= index;"
+    [style.display]="isDisplay(food.display)" [style.margin-left]="food.margin_left">
+      <div class="food-select-block">
+        <div class="first-col">
+          <div *ngIf="food.child_foodIds.length > 0" class="icon-block">
+            <mat-icon [style.display]="isDisplay(!food.child_foods_display)" (click)="toggleData(food,food.child_foodIds,'parent')">arrow_right</mat-icon>
+            <mat-icon [style.display]="isDisplay(food.child_foods_display)" (click)="toggleData(food,food.child_foodIds,'parent')">arrow_drop_down</mat-icon>
+          </div>
+        </div>
+        <div class="second-col {{checkSelectedId(food)}}" (click)="select(food)">{{food.name}}</div>
+      </div>
+    </div>
+  </div>
+</div>
